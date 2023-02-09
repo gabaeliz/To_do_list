@@ -6,9 +6,12 @@
 }
 
 main {
-  background: #0f0c29;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  background: #0f0c29;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -44,7 +47,7 @@ form {
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
-  width: 65%;
+  width: 35%;
 }
 
 .inputForm::placeholder {
@@ -53,9 +56,12 @@ form {
 
 .btnCreate {
   padding: 10px 15px;
-  background: #0f0c29;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #0f0c29;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: none;
   color: #fff;
   border-radius: 5px;
@@ -76,7 +82,7 @@ form {
 .card {
   width: 90%;
   padding: 15px;
-  box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
+  box-shadow: 2px 4px 4px 4px #302b63;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -94,7 +100,7 @@ form {
 }
 
 .icon:hover {
-  color: #302b63;
+  color: rgba(62, 161, 219, 1);
 }
 
 .completeIcon {
@@ -113,6 +119,7 @@ form {
   top: -100px;
   left: 0;
 }
+
 .deleteSpace {
   position: relative;
   width: 30%;
