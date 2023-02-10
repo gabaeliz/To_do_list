@@ -7,18 +7,18 @@ export const addTask = (evento) => {
 
     const list = document.querySelector('[data-list]');
     const input = document.querySelector('[data-form-input]');
-    const calendar = document.querySelector("[data-form-date]");
+    const calendar = document.querySelector('[data-form-date]');
 
     const value = input.value;
     const date = calendar.value;
     const dateFormat = moment(date).format('DD/MM/YYYY');
 
-    if (value === "" || date === "") {
+    if (value === '' || date === '') {
         return
     }
 
     input.value = '';
-    calendar.value = "";
+    calendar.value = '';
 
     const taskObject = {
         value,

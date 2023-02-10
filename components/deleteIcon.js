@@ -10,4 +10,4 @@ const deleteTask = (event) => {
     parent.remove();
 };
 
-export default deleteIcon
+export default deleteIcon;
