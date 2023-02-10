@@ -11,7 +11,7 @@ export const displayTasks = () => {
     dates.forEach((date) => {
         const dateMoment = moment(date, 'DD/MM/YYYY');
         list.appendChild(dateElement(date));
-        taskList.foreach((task) => {
+        taskList.forEach((task) => {
             const taskDate = moment(task.dateFormat, 'DD/MM/YYYY');
 
             const diff = dateMoment.diff(taskDate);
