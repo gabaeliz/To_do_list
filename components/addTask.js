@@ -1,5 +1,6 @@
 import checkComplete from "./checkComplete.js";
 import deleteIcon from "./deleteIcon.js";
+import { displayTasks } from "./readTask.js";
 
 export const addTask = (evento) => {
     evento.preventDefault();
@@ -12,6 +13,10 @@ export const addTask = (evento) => {
     const date = calendar.value;
     const dateFormat = moment(date).format('DD/MM/YYYY');
 
+    if (value === "" || date === "") {
+        return
+    }
+
     input.value = '';
     calendar.value = "";
 
@@ -20,13 +25,13 @@ export const addTask = (evento) => {
         dateFormat,
     };
 
+    list.innerHTML = '';
 
     const taskList = JSON.parse(localStorage.getItem('tasks')) || [];
     taskList.push(taskObject);
     localStorage.setItem('tasks', JSON.stringify(taskList));
-
-    const task = createTask(taskObject);
-    list.appendChild(task);
+    
+    displayTasks();
 };
 
 export const createTask = ({ value, dateFormat }) => {
@@ -45,7 +50,7 @@ export const createTask = ({ value, dateFormat }) => {
     //Al elemento lista le quiero agregar un "hijo"(tarea)
     const dateElement = document.createElement("span");
     dateElement.innerHTML = dateFormat;
-    
+
     task.appendChild(taskContent);
     task.appendChild(dateElement);
     task.appendChild(deleteIcon());
